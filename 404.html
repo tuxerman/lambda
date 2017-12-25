@@ -1,39 +1,32 @@
----
-permalink: /404.html
-sitemap: false
----
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ site.name }} | Page not found</title>
+  <title>lambda | Page not found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% if site.local_fonts %}
-    {% include stylesheet.html path="fonts" %}
-  {% endif %}
+  
 
-  {% if site.blog_theme == "light" %}
-    {% stylesheet notfound-light %}
-    {% include stylesheet.html path="notfound-light" %}
-  {% else %}
-    {% include stylesheet.html path="notfound-dark" %}
-  {% endif %}
+  
+    <link type="text/css" rel="stylesheet" href="/lambda/assets/notfound-light.css">
+    <link rel="stylesheet" href="/lambda/assets/notfound-light.css">
+
+  
 </head>
 <body>
   <main class="notfound-wrapper">
     <div class="notfound-content">
-      <h1><a href="{{ '/' | relative_url }}" title="Back to homepage">404. Hmm.</a></h1>
+      <h1><a href="/lambda/" title="Back to homepage">404. Hmm.</a></h1>
       <p>
-        Let's get you back to the <a href="{{ '/' | relative_url }}">homepage</a>!
+        Let's get you back to the <a href="/lambda/">homepage</a>!
       </p>
     </div>
   </main>
 
-  {% unless site.local_fonts %}
-    {% include javascript.html path="webfonts" %}
-  {% endunless %}
+  
+    <script src="/lambda/assets/webfonts.js"></script>
+
+  
 </body>
 </html>
